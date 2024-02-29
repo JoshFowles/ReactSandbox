@@ -24,6 +24,18 @@
   color: rgb(255, 255, 255);
 }
 
+.Mohawk-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Gremlins {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .App-link {
   color: #61dafb;
 }
