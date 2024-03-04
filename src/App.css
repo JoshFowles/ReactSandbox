@@ -14,3 +14,35 @@
   display: none;
 }
 
+.Cat-header {
+  font-size: 48px;
+  font-family: 'Comic Sans MS', 'comic sans', cursive;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right,
+  #e81416,
+  #ffa500,
+  #faeb36,
+  #79c314,
+  #487de7,
+  #4b369d,
+  #70369d
+  );
+  background-position: center;
+  background-size: 800px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Breed-paragraph {
+  font-size: 22px;
+  color: #FF00FF;
+  text-align: center;
+  display: inline; 
+  margin-top: 20px;
+  margin-bottom: 40px;
+  :hover {
+    color: #966919;
+  }
+}
