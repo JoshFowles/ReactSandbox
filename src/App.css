@@ -71,11 +71,15 @@
 }
 
 .logo {
-  position: fixed;
+  position: absolute;
   right: 10px;
   bottom: 10px;
   z-index: 1;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   width: 64px;
   height: 64px;
+}
+
+.newGallery {
+  background-color: rgba(22, 104, 246, 33%);
 }

@@ -1,7 +1,10 @@
 import './App.css';
+import {useState } from "react";
 
 
 function Cats() {
+  const [isGalleryBlue, setIsGalleryBlue] = useState(false);
+
   return (
 
     <div>
@@ -17,7 +20,7 @@ function Cats() {
           </p>
       </div>
 
-      <div className='Gallery'>
+      <div className= {`Gallery ${isGalleryBlue ? 'newGallery' : ''}`}>
         <img className='image' src= {require('./assets/kitten.webp')} alt='cozyCat' />
         <img className='image' src= {require('./assets/cozyCat.webp')} alt='cozyCat' />
         <img className='image' src= {require('./assets/cuteCat.jpg')} alt='cozyCat' />
@@ -28,7 +31,7 @@ function Cats() {
         <img className='image' src= {require('./assets/sphinxCat.jpg')} alt='cozyCat' />
         <img className='image' src= {require('./assets/weirdSleepCat.webp')} alt='cozyCat' />
         
-        <img className='logo' src= {require('./assets/logoCat.webp')} alt='catDrawn' />
+        <img className='logo' onClick={() => setIsGalleryBlue(!isGalleryBlue)} src= {require('./assets/logoCat.webp')} alt='catDrawn' />
 
       </div>
     </div>
