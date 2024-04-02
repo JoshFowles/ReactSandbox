@@ -1,16 +1,18 @@
 import './App.css';
 import Cats from './Cats';
+import Timer from './Timer.js';
 import './assets/Flasher Gremlin.gif';
 import {useState } from "react";
 
 function App() {
+  const [isTimer, setIsTimer] = useState(true);
   const [isCats, setIsCats] = useState(false);
   return (
 
 
     //setup background gif and header
     <div>
-      <div className={`Mohawk-header ${isCats ? 'Hidden' : ''}`}>
+      <div className={`Mohawk-header ${isCats ? 'Hidden' : '' } ${isTimer ? 'Hidden' : ''}`}>
         <div style={{
           backgroundImage: 'url(https://imgur.com/pYk8ItK.gif)',
           backgroundSize: 'cover',
@@ -54,6 +56,14 @@ function App() {
 
       <div>
         <button onClick={() => setIsCats(!isCats)}>This will take you to Cats</button>
+      </div>
+
+      <div>
+        <button onClick={() => setIsTimer(!isTimer)}>This will take you to Timer</button>
+      </div>
+
+      <div className= {`${isTimer ? '' : 'Hidden'}`}>
+        <Timer />
       </div>
 
       <div className= {`${isCats ? '' : 'Hidden'}`}>
