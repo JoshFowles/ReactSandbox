@@ -11,7 +11,7 @@ function Timer() {
               setSeconds(seconds - 1);
             } else {
               clearInterval(timer);
-              setSeconds(15);
+              //setSeconds(15);
               setIsStart(false);
             }
           }, 1000);
@@ -19,12 +19,22 @@ function Timer() {
         }
       }, [seconds, isStart]);
 
-    let currentCount = seconds;
+    const handleStartClick = () => {
+        if(!isStart) {
+            const userInput = prompt("Please type how long you want to count down");
+            setSeconds(userInput);
+            setIsStart(true);
+        }
+    }
+
+    const continueStartClick = () => {
+        setIsStart(true);
+    }
 
     return (
         <div className="counter-container">
-            <h1>Timer: {currentCount}</h1>
-            <button className="start-button" onClick={() => setIsStart(true)}>START</button>
+            <h1>Timer: {seconds}</h1>
+            <button className="start-button" onClick={seconds > 0 ? continueStartClick : handleStartClick}>START</button>
             <button className="stop-button" onClick={() => setIsStart(false)}>STOP</button>
         </div>
     );
