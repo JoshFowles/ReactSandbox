@@ -25,7 +25,7 @@ function Timer() {
         <div className="counter-container">
             <h1>Timer: {currentCount}</h1>
             <button className="start-button" onClick={() => setIsStart(true)}>START</button>
-            <button className="stop-button">STOP</button>
+            <button className="stop-button" onClick={() => setIsStart(false)}>STOP</button>
         </div>
     );
 }
