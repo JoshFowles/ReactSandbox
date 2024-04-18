@@ -1,0 +1,15 @@
+.goblinMode {
+    background-color: rgb(48, 86, 17);
+    color: rgb(126, 234, 38)
+}
+
+.startTroll {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.slider {
+    width: 500px;
+    accent-color: black;
+}
