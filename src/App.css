@@ -7,8 +7,14 @@
 .Gremlins {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.Gremlins > div {
+  flex: 1;
+}
+
 
 .Hidden {
   display: none;
@@ -82,4 +88,9 @@
 
 .newGallery {
   background-color: rgba(22, 104, 246, 33%);
+}
+
+.Input-Form {
+  margin: 0 auto; 
+  width:250px;
 }
